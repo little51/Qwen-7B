@@ -18,6 +18,7 @@ pip3 install uvicorn -i https://pypi.mirrors.ustc.edu.cn/simple --trusted-host=p
 ## 2、下载模型
 
 ```bash
+# 使用aliendao.cn镜像快速下载
 python model_download.py --repo_id Qwen/Qwen-7B-Chat --mirror
 ```
 

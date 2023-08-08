@@ -28,7 +28,7 @@ app = FastAPI()
 def stream_item(prompt, history, max_length, top_p, temperature):
     global model, tokenizer
     global stream_buffer
-    for response in model.chat(tokenizer, prompt, history=history, stream=True):
+    for response in model.chat_stream(tokenizer, prompt, history=history):
         query = prompt
         now = datetime.datetime.now()
         stream_buffer[prompt] = {
